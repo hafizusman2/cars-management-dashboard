@@ -71,7 +71,7 @@ const Login = ({ email, password }) => {
           message: 'LOGIN SUCCESSFUL',
         });
         setTimeout(() => {
-          navigate('/dashboard');
+          navigate('/stats');
         }, 1000);
       } else if (apiResponse?.data?.success === false) {
         showNotification({
