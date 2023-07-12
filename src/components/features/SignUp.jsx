@@ -53,7 +53,7 @@ const SignUp = () => {
       });
       setTimeout(() => {
         navigate('/');
-      }, 2000);
+      }, 1500);
     } catch (e) {
       setLoading(false);
       showNotification({
