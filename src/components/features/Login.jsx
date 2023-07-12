@@ -150,7 +150,7 @@ const Login = ({ email, password }) => {
             }}
           >
             <Stack justify={'center'} style={{ height: '100%', width: '100%' }}>
-              <Title align="center">Welcome to Get My Dream Ride</Title>
+              <Title align="center">Welcome to Cars Management System</Title>
               <Text align="center">
                 A perfect place to find your dream car!
               </Text>
