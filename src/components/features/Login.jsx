@@ -149,7 +149,10 @@ const Login = ({ email, password }) => {
               width: '100%',
             }}
           >
-            <Stack justify={'center'} style={{ height: '100%', width: '100%' }}>
+            <Stack
+              justify={'center'}
+              style={{ height: '100%', width: '100%', marginTop: '5%' }}
+            >
               <Title align="center">Welcome to Cars Management System</Title>
               <Text align="center">
                 A perfect place to find your dream car!
@@ -171,7 +174,7 @@ const Login = ({ email, password }) => {
               width: '100%',
 
               position: matches769 ? 'relative' : 'absolute',
-              top: matches769 ? '0px' : '100px',
+              top: matches769 ? '0px' : '35%',
             }}
             p={'xl'}
           >
