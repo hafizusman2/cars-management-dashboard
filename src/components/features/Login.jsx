@@ -29,7 +29,7 @@ import {
 import loginImage from '../../assets/loginImg.png';
 import { useMediaQuery } from '@mantine/hooks';
 // NAVIGATION
-const Login = ({ email, password }) => {
+const Login = ({ onLogin }) => {
   const matches769 = useMediaQuery('(min-width: 769px)');
   let navigate = useNavigate();
   // HOOKS
@@ -42,8 +42,8 @@ const Login = ({ email, password }) => {
   // FORM
   const form = useForm({
     initialValues: {
-      email: email,
-      password: password,
+      email: '',
+      password: '',
     },
 
     validate: {
@@ -70,6 +70,7 @@ const Login = ({ email, password }) => {
           color: 'green',
           message: 'LOGIN SUCCESSFUL',
         });
+        await onLogin();
         setTimeout(() => {
           navigate('/stats');
         }, 1000);

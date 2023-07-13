@@ -2,6 +2,7 @@
 const storeToken = (token) => {
   try {
     localStorage.setItem('access_token', token);
+    console.log('Token stored');
   } catch (error) {
     console.log('Error storing token: ', error);
   }
@@ -15,9 +16,11 @@ const getToken = () => {
       return token;
     } else {
       console.log('Token not found in storage.');
+      return null;
     }
   } catch (error) {
     console.log('Error retrieving token: ', error);
+    return null;
   }
 };
 
@@ -30,16 +33,8 @@ const removeToken = () => {
   }
 };
 
-// Check if the user is authenticated
-const isAuthenticated = () => {
-  // Check if the token exists to determine the authentication status
-  const token = getToken();
-  return token !== null;
-};
-
 module.exports = {
   storeToken,
   getToken,
   removeToken,
-  isAuthenticated,
 };
