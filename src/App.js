@@ -12,6 +12,8 @@ import Home from './components/features/Home';
 import NotFound from './pages/NotFound';
 import Dashboard from './components/features/Dashboard';
 import ProtectedRoutes from './components/common/ProtectedRoutes';
+import AddCategory from './components/features/AddCategory';
+import ViewCategory from './components/features/ViewCategory';
 import { useState, useEffect } from 'react';
 import { isAuthenticated } from './api/auth';
 
@@ -68,6 +70,21 @@ function App() {
               <Route
                 path="/stats/"
                 element={<Dashboard setCurrentLocation={setCurrentLocation} />}
+              />
+              <Route
+                path="/stats/add-category"
+                element={
+                  <AddCategory setCurrentLocation={setCurrentLocation} />
+                }
+              />
+              <Route
+                path="/stats/categories"
+                element={
+                  <ViewCategory
+                    setCurrentLocation={setCurrentLocation}
+                    authenticated={authenticated}
+                  />
+                }
               />
             </Route>
           </Route>
