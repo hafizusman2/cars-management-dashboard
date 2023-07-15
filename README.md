@@ -1,10 +1,32 @@
+# Installation
+
+```bash
+git clone git@github.com:hafizusman2/cars-management-dashboard.git
+```
+
+# Usage
+
+```bash
+cd cars-management-dashboard
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# to create .env file
+
+cp .env.example .env
+You can also change the vars in .env file
+provided in the env for testing purpose
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+# to install dependencies
+
+npm install
 
 ### `npm start`
 
