@@ -38,10 +38,13 @@ const AddCategory = ({ setCurrentLocation }) => {
   });
 
   const getCategory = async () => {
+    setLoading(true);
     try {
       const res = await categoriesApi.getCategoryById(params.id);
       form.setFieldValue('name', res.data.data.name);
+      setLoading(false);
     } catch (e) {
+      setLoading(false);
       console.log(e);
     }
   };

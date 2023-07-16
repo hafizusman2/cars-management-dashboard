@@ -208,8 +208,8 @@ const ViewCategory = ({ setCurrentLocation }) => {
         color: 'red',
         title: 'ERROR',
         message:
-          e.response.data.data ||
-          e.response.data.message ||
+          e.response?.data?.data ||
+          e.response?.data?.message ||
           e.message ||
           'Something went wrong, please try again',
       });

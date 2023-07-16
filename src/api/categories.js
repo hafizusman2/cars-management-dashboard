@@ -8,7 +8,7 @@ export const categoriesApi = {
 
   getCategoryById(id) {
     const url = '/car-categories/' + id;
-    return axiosClient.post(url);
+    return axiosClient.get(url);
   },
 
   getAll() {
