@@ -94,24 +94,24 @@ function App() {
                   />
                 }
               />
+              <Route
+                path="/stats/add-car"
+                element={<AddCar setCurrentLocation={setCurrentLocation} />}
+              />
+              <Route
+                path="/stats/update-car/:id"
+                element={<AddCar setCurrentLocation={setCurrentLocation} />}
+              />
+              <Route
+                path="/stats/cars"
+                element={
+                  <ViewCar
+                    setCurrentLocation={setCurrentLocation}
+                    authenticated={authenticated}
+                  />
+                }
+              />
             </Route>
-            <Route
-              path="/stats/add-car"
-              element={<AddCar setCurrentLocation={setCurrentLocation} />}
-            />
-            <Route
-              path="/stats/update-car/:id"
-              element={<AddCar setCurrentLocation={setCurrentLocation} />}
-            />
-            <Route
-              path="/stats/cars"
-              element={
-                <ViewCar
-                  setCurrentLocation={setCurrentLocation}
-                  authenticated={authenticated}
-                />
-              }
-            />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
