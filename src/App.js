@@ -14,6 +14,8 @@ import Dashboard from './components/features/Dashboard';
 import ProtectedRoutes from './components/common/ProtectedRoutes';
 import AddCategory from './components/features/AddCategory';
 import ViewCategory from './components/features/ViewCategory';
+import AddCar from './components/features/AddCar';
+import ViewCar from './components/features/ViewCar';
 import { useState, useEffect } from 'react';
 import { isAuthenticated } from './api/auth';
 
@@ -93,6 +95,23 @@ function App() {
                 }
               />
             </Route>
+            <Route
+              path="/stats/add-car"
+              element={<AddCar setCurrentLocation={setCurrentLocation} />}
+            />
+            <Route
+              path="/stats/update-car/:id"
+              element={<AddCar setCurrentLocation={setCurrentLocation} />}
+            />
+            <Route
+              path="/stats/cars"
+              element={
+                <ViewCar
+                  setCurrentLocation={setCurrentLocation}
+                  authenticated={authenticated}
+                />
+              }
+            />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
