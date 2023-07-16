@@ -191,7 +191,7 @@ const AddCar = ({ setCurrentLocation }) => {
     form_data.append('category', event?.category);
     form_data.append('manufacturer', event?.manufacturer);
     form_data.append('price', event?.price);
-    form_data.append('color', 'color');
+    form_data.append('color', event?.color);
 
     for (let image of images) {
       form_data.append('assets', image);
