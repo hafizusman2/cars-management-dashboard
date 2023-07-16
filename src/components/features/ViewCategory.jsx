@@ -266,12 +266,12 @@ const ViewCategory = ({ setCurrentLocation }) => {
     setOpened(true);
     setId(id);
   };
-  const confirmDelete = () => {
+  const confirmDelete = async () => {
     setOpened(false);
     setVisible(true);
 
     try {
-      const res = categoriesApi.delete(id);
+      const res = await categoriesApi.delete(id);
       if (res.data.success) {
         showNotification({
           autoClose: 5000,
@@ -444,9 +444,9 @@ const ViewCategory = ({ setCurrentLocation }) => {
             }}
             opened={opened}
             transition="rotate-left"
-            transitionDuration={600}
+            transitionduration={600}
             size={600}
-            transitionTimingFunction="ease"
+            transitiontimingfunction="ease"
             onClose={() => setOpened(false)}
           >
             <Title align="center" order={3}>
@@ -538,7 +538,7 @@ const ViewCategory = ({ setCurrentLocation }) => {
                                         variant="transparent"
                                         onClick={() => {
                                           navigate(
-                                            `/stats/add-category/${row._id}`
+                                            `/stats/update-category/${row._id}`
                                           );
                                         }}
                                       >
@@ -618,7 +618,7 @@ const ViewCategory = ({ setCurrentLocation }) => {
                           variant="transparent"
                           onClick={() => {
                             console.log('Clicked on edit button');
-                            navigate(`/stats/add-category/${row._id}`);
+                            navigate(`/stats/update-category/${row._id}`);
                           }}
                         >
                           <Edit color="green" />

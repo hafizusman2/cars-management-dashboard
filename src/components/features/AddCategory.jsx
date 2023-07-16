@@ -76,8 +76,8 @@ const AddCategory = ({ setCurrentLocation }) => {
         color: 'green',
         title: 'Success',
         message: params?.id
-          ? 'Category Added Successfully'
-          : 'Category Updated Successfully',
+          ? 'Category Updated Successfully'
+          : 'Category Added Successfully',
       });
       setTimeout(() => {
         navigate('/stats/categories');

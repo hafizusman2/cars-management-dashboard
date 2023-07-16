@@ -5,7 +5,7 @@ import { Users, Plus, Eye, UserPlus, Layout2, Car } from 'tabler-icons-react';
 export const SideBarData = [
   {
     title: '1 - Dashboard',
-    path: '#',
+    path: '/stats',
     icon: <Layout2 size={21} />,
   },
   {

@@ -78,6 +78,12 @@ function App() {
                 }
               />
               <Route
+                path="/stats/update-category/:id"
+                element={
+                  <AddCategory setCurrentLocation={setCurrentLocation} />
+                }
+              />
+              <Route
                 path="/stats/categories"
                 element={
                   <ViewCategory
