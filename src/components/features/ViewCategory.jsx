@@ -294,9 +294,9 @@ const ViewCategory = ({ setCurrentLocation }) => {
         color: 'red',
         title: 'Oops - ERROR',
         message:
-          e.response.data.data ||
-          e.response.data.message ||
-          e.message ||
+          e?.response?.data?.data ||
+          e?.response?.data?.message ||
+          e?.message ||
           'Something went wrong, please try again',
       });
     }

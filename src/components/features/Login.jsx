@@ -115,10 +115,10 @@ const Login = ({ onLogin }) => {
           title: 'ERROR',
           color: 'red',
           message:
-            error.response.data.data ||
-            error.response.data.message ||
-            error.message ||
-            'SOMETHING WENT WRONG, PLEASE TRY AGAIN',
+            error?.response?.data?.data ||
+            error?.response?.data?.message ||
+            error?.message ||
+            'Something went wrong, please try again',
         });
       }
     }
